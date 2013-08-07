@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  summary: MyText
+  cost: 1
+  direction: MyString
+  country: MyString
+
+two:
+  name: MyString
+  summary: MyText
+  cost: 1
+  direction: MyString
+  country: MyString
