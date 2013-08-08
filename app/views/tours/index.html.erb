@@ -1,0 +1,23 @@
+<h1>Listing Tours</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @tours.each do |tour| %>
+  <tr>
+    <td><%= tour.cost %></td>
+    <td><%= tour.name %></td>
+    <td><%= tour.direction %></td>
+    <td><%= tour.country %></td>
+    <td><%= tour.summary %></td>
+    <td><%= link_to '>>', tour %></td>
+  </tr>
+<% end %>
+</table>
+

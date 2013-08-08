@@ -1,5 +1,11 @@
 Coalatravel::Application.routes.draw do
+#  get "tours/index"
+
+ # get "tours/new"
+
   root :to => "tours#index"
+
+  resources :tours
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
