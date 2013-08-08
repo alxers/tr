@@ -1,2 +1,7 @@
-<h1>Tours#show</h1>
-<%= @tour %>
+<h2><%= @tour.name %></h2>
+<blockquote>
+  <p class="text-info"><%= @tour.cost %>$</p><br />
+  <p class="text-info"><%= @tour.direction %></p><br />
+  <p><%= @tour.summary %></p>
+  <small><%= @tour.country %></small>
+</blockquote>
