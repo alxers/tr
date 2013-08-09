@@ -1,6 +1,10 @@
 class ToursController < ApplicationController
   def index
-    @tours = Tour.all
+    if params[:q].present?
+      @tours = Tour.tire.search(params[:q], load: true)
+    else
+      @tours = Tour.all
+    end
   end
 
   def show

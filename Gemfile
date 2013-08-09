@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'activeadmin'
 gem 'country-select'
+gem 'tire'
 
 # Gems used only for assets and not required
 # in production environments by default.
