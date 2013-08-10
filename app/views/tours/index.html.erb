@@ -3,7 +3,14 @@
 <%= form_tag tours_path, method: :get do %>
   <p>
     <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Search", name: nil, class: "btn btn-mini btn-success" %>
+    <%= submit_tag "Elastic", name: nil, class: "btn btn-mini btn-success" %>
+  </p>
+<% end %>
+
+<%= form_tag tours_path, method: :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Sphinx", name: nil, class: "btn btn-mini btn-success" %>
   </p>
 <% end %>
  
