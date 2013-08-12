@@ -1,19 +1,24 @@
 <h2>Listing Tours</h2>
 
-<%= form_tag tours_path, method: :get do %>
-  <p>
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Elastic", name: nil, class: "btn btn-mini btn-success" %>
-  </p>
-<% end %>
+<!--
+<form action="/tours" method="get" id="search_form">
+  Search:<input type="text" name="query">
+  <input type="submit">
+</form>
+<br />
+<select name="engine" form="search_form">
+  <option value="sphinx">Sphinx</option>
+  <option value="elastic">Elastic</option>
+</select>
+-->
 
 <%= form_tag tours_path, method: :get do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Sphinx", name: nil, class: "btn btn-mini btn-success" %>
-  </p>
+  <%= text_field_tag :query %>
+  <%= select_tag "engine", options_for_select(["elastic", "sphinx"]) %>
+  <%= submit_tag "Search", name: nil, class: "btn btn-mini btn-success" %>
 <% end %>
- 
+
 <table class="table table-hover">
   <tr>
     <th>Cost $</th>

@@ -1,9 +1,9 @@
 class ToursController < ApplicationController
   def index
-    if params[:q].present?
-      @tours = Tour.tire.search(params[:q], load: true)
-    elsif params[:search].present?
-      @tours = Tour.search(params[:search])
+    if params[:engine] == "elastic"
+      @tours = Tour.tire.search(params[:query], load: true)
+    elsif params[:engine] == "sphinx"
+      @tours = Tour.search(params[:query])
     else
       @tours = Tour.all
     end
