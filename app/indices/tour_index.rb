@@ -3,7 +3,7 @@ ThinkingSphinx::Index.define :tour, :with => :active_record do
   
   indexes summary
   indexes country, direction, cost, sortable: true
-  #indexes :name, sortable: true
+  indexes :name, sortable: true
 
   # attributes
   #has cost
