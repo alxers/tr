@@ -1,0 +1,10 @@
+<%= form_tag tours_path, method: :get do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= select_tag "engine", options_for_select(["elastic", "sphinx"]) %>
+  <%= submit_tag "Search", name: nil, class: "btn btn-mini btn-success" %>
+  <%= label_tag 'name' %><%= text_field_tag :name, params[:name] %>
+  <%= label_tag 'cost' %><%= text_field_tag :cost, params[:cost] %>
+  <%= label_tag 'direction' %><%= text_field_tag :direction, params[:direction] %>
+  <%= label_tag 'country' %><%= text_field_tag :country, params[:country]  %>
+<% end %>
+
