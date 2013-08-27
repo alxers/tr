@@ -3,7 +3,8 @@
   <%= select_tag "engine", options_for_select(["elastic", "sphinx"]) %>
   <%= submit_tag "Search", name: nil, class: "btn btn-mini btn-success" %>
   <%= label_tag 'name' %><%= text_field_tag :name, params[:name] %>
-  <%= label_tag 'cost' %><%= text_field_tag :cost, params[:cost] %>
+  <%= label_tag 'cost_from' %><%= text_field_tag :cost_from, params[:cost_from] %>
+  <%= label_tag 'cost_to' %><%= text_field_tag :cost_to, params[:cost_to] %>
   <%= label_tag 'direction' %><%= text_field_tag :direction, params[:direction] %>
   <%= label_tag 'country' %><%= text_field_tag :country, params[:country]  %>
 <% end %>
